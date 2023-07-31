@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="..\public\media\logo-main.svg">
+    <link rel="stylesheet" type="text/css"  href="\css\artist-page.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title><%= artist.artName %></title>
+    <link rel="icon" type="image/png"  href="\media\32 x 32 icon.png">
+</head>
+<body>
+
+
+
+  <title>Account settings</title>
+  <link rel="icon" type="image/png"  href="\media\32 x 32 icon.png">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <%- include('partials/header')%>   
+
+
+    
+
+
+
+
+
+
+
+
+
+    <div id="container-new" class="container-new">
+
+      <% if(saa && saa.length) { %> 
+          <div class="alert alert-success alert-dismissible fade show col-6 offset-3 mt-3" 
+          id="saaAlert" role="alert">
+              <h3 class="text-center">
+                  <%= saa %> 
+              </h3>
+              <p id="dismiss-saa" class="text-center dismiss">dismiss</p>
+            </div>
+          <%  } %>
+  
+       
+          <div img-cont style="display: inline-block; align-items: center; text-align: center; margin-bottom: -3em;">
+              <img class="thumb" alt="" src="<%= artist.banner  %>">
+          </div>
+
+    </div>
+    <div class="col-md-12 text-center ">
+     
+            <h3 class="mt-0 card-title text-center offset-0">
+                <%= artist.artName  %>
+            </h3>
+      
+            <p class="card-text info text-center offset-0 mb-0">
+                 Artist genre: <%= artist.genre  %>
+            </p>
+
+            <p class="text-center"><%= artist.followers %> followers</p>
+
+       
+            <form action="/artists/<%= artist.id %>/follow?_method=PATCH" method="post">
+            <button class="follow">follow</button>
+            </form>
+    </div>
+
+
+
+
+<div class="bio-center about-bio mt-2">
+    <h3 class="text-center mt-2 mb-3">description</h3>
+    <p class="mt-1 text-center"><%= artist.bio %></p>
+
+
+    <p>date joined: 22/01/2023</p>
+    <p>number of posts: 0</p>
+
+    
+    <form action="/account/<%= artist.id %>/report-account" method="get">
+      <button class="buy mb-3">report</button>
+    </form>
+
+<a href="/account/<%= artist.id %>/report-account">
+    <button class="buy mb-3">report</button>
+  </a>
+
+    </div>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+    </div>
+<div class="mt-auto footer">
+<%- include('partials/footer')%>   
+
+
+</div> 
+</body>
+
+<script>
+const alert = document.getElementById('saaAlert');
+const dismiss = document.getElementById('dismiss-saa');
+dismiss.onclick = function () {
+  if (alert.style.display !== "none") {
+    alert.style.display = "none";
+  } else {
+    alert.style.display = "block";
+  }
+};
+</script>
+
+<style>
+a{
+    color: #3c3d3c;
+    text-decoration: none;
+}
+</style>
+
+</html>

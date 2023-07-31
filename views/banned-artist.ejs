@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="\css\aa.css">
+    <script src="https://kit.fontawesome.com/1364972581.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>account has been banned</title>
+    <link rel="icon" type="image/png"  href="\media\32 x 32 icon.png">
+</head>
+<body>
+
+     <%- include('partials/header')%>
+  
+
+    <div id="container-new" class="col-6 offset-3">
+<h1 class="text-center mt-3 banned">
+    this account has been banned
+  </h1>
+
+    <% if(activeUser && userId === artistUser) { %> 
+      <p class="mt-5">you should have received an email explaining the resaon for your ban. you can appeal the ban by sending us a message in the textbox below, or send as an email at: </p>
+
+      <label for="bio" class="form-label mt-3">details about your appeal:</label>
+      <textarea name="bio" id="desc" cols="50" rows="5" minlength="50" maxlength="350" required></textarea>
+     <button class="offset-4 mt-3">appeal ban</button>
+            <% } %> 
+</div>
+</div>
+<div class="mt-auto mt-5">
+<%- include('partials/footer')%>   
+</div> 
+</body>
+
+
+
+<script>
+  const alert = document.getElementById('pdAlert');
+  const dismiss = document.getElementById('dismiss-pd');
+  dismiss.onclick = function () {
+    if (alert.style.display !== "none") {
+      alert.style.display = "none";
+    } else {
+      alert.style.display = "block";
+    }
+  };
+  
+  </script>
+
+<style>
+.banned{
+    color: #e40f0f;
+}
+    a{
+    color: #3c3d3c;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #3c3d3c;
+ text-decoration: underline #1ca78b 0.3vh;
+}
+
+footer.a{
+    color: blue;
+}
+
+</style>
+</html>

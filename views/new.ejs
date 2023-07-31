@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="\css\sign-in.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="\js\allowedCharsPost.js" defer></script>
+    <script src="\js\img-validation.js" defer></script>
+    <title>Edit post</title>
+    <link rel="icon" type="image/png"  href="\media\32 x 32 icon.png">
+</head>
+<body>
+
+
+  <%- include('partials/header')%>   
+  
+
+
+
+
+    <div id="container-new" class="">
+<h2 class="text-center mt-3">
+    <div class="line-before"></div>
+    edit concert
+    <div class="line-after"></div>
+  </h2>
+
+
+<form action="/posts/<%= concert.id %>/details" method="POST" id="form" enctype="multipart/form-data">
+
+
+  
+
+
+
+  
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+    
+    </div>
+    
+    <input type="text" placeholder="title" value="<%= concert.title  %>" class="price"
+     name="title" id="title" minlength="5" maxlength="60">
+     <div class="valid-feedback mb-3">good</div>
+       
+  </div>
+
+  <p class="invalidTitle"></p>
+
+
+
+
+
+  
+    
+
+    <label for="desc" class="form-label">Concert description</label>
+    <br>
+    <textarea type="text" placeholder="add description" value="<%= concert.desc  %>" class="price"
+     name="desc" id="desc" cols="50" rows="5" minlength="50" maxlength="350">
+    </textarea>
+     <div class="valid-feedback mb-3">good</div>
+       
+<p class="invalidDesc"></p>
+
+
+<br>
+
+
+      <label for="year" class="mb-2">Concert year</label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="year">Concert year</label>
+        </div>
+        <select name="year" class="custom-select form-control" id="inputGroupSelect01">
+            <option value="1960" <%=concert.year === '1960' ? 'selected': '' %>>1960</option>
+            <option value="1961" <%=concert.year === '1961' ? 'selected': '' %>>1961</option>
+            <option value="1962" <%=concert.year === '1962' ? 'selected': '' %>>1962</option>
+            <option value="1963" <%=concert.year === '1963' ? 'selected': '' %>>1963</option>
+            <option value="1964" <%=concert.year === '1964' ? 'selected': '' %>>1964</option>
+            <option value="1965" <%=concert.year === '1965' ? 'selected': '' %>>1965</option>
+            <option value="1966" <%=concert.year === '1966' ? 'selected': '' %>>1966</option>
+            <option value="1967" <%=concert.year === '1967' ? 'selected': '' %>>1967</option>
+            <option value="1968" <%=concert.year === '1968' ? 'selected': '' %>>1968</option>
+            <option value="1969" <%=concert.year === '1969' ? 'selected': '' %>>1969</option>
+            <option value="1970" <%=concert.year === '1970' ? 'selected': '' %>>1970</option>
+            <option value="1971" <%=concert.year === '1971' ? 'selected': '' %>>1971</option>
+            <option value="1972" <%=concert.year === '1972' ? 'selected': '' %>>1972</option>
+            <option value="1973" <%=concert.year === '1973' ? 'selected': '' %>>1973</option>
+            <option value="1974" <%=concert.year === '1974' ? 'selected': '' %>>1974</option>
+            <option value="1975" <%=concert.year === '1975' ? 'selected': '' %>>1975</option>
+            <option value="1976" <%=concert.year === '1976' ? 'selected': '' %>>1976</option>
+            <option value="1977" <%=concert.year === '1977' ? 'selected': '' %>>1977</option>
+            <option value="1978" <%=concert.year === '1978' ? 'selected': '' %>>1978</option>
+            <option value="1979" <%=concert.year === '1979' ? 'selected': '' %>>1979</option>
+            <option value="1980" <%=concert.year === '1980' ? 'selected': '' %>>1980</option>
+            <option value="1981" <%=concert.year === '1981' ? 'selected': '' %>>1981</option>
+            <option value="1982" <%=concert.year === '1982' ? 'selected': '' %>>1982</option>
+            <option value="1983" <%=concert.year === '1983' ? 'selected': '' %>>1983</option>
+            <option value="1984" <%=concert.year === '1984' ? 'selected': '' %>>1984</option>
+            <option value="1985" <%=concert.year === '1985' ? 'selected': '' %>>1985</option>
+            <option value="1986" <%=concert.year === '1986' ? 'selected': '' %>>1986</option>
+            <option value="1987" <%=concert.year === '1987' ? 'selected': '' %>>1987</option>
+            <option value="1988" <%=concert.year === '1988' ? 'selected': '' %>>1988</option>
+            <option value="1989" <%=concert.year === '1989' ? 'selected': '' %>>1989</option>
+            <option value="1990" <%=concert.year === '1990' ? 'selected': '' %>>1990</option>
+            <option value="1991" <%=concert.year === '1991' ? 'selected': '' %>>1991</option>
+            <option value="1992" <%=concert.year === '1992' ? 'selected': '' %>>1992</option>
+            <option value="1993" <%=concert.year === '1993' ? 'selected': '' %>>1993</option>
+            <option value="1994" <%=concert.year === '1994' ? 'selected': '' %>>1994</option>
+            <option value="1995" <%=concert.year === '1995' ? 'selected': '' %>>1995</option>
+            <option value="1996" <%=concert.year === '1996' ? 'selected': '' %>>1996</option>
+            <option value="1997" <%=concert.year === '1997' ? 'selected': '' %>>1997</option>
+            <option value="1998" <%=concert.year === '1998' ? 'selected': '' %>>1998</option>
+            <option value="1999" <%=concert.year === '1999' ? 'selected': '' %>>1999</option>
+            <option value="2000" <%=concert.year === '2000' ? 'selected': '' %>>2000</option>
+            <option value="2001" <%=concert.year === '2001' ? 'selected': '' %>>2001</option>
+            <option value="2002" <%=concert.year === '2002' ? 'selected': '' %>>2002</option>
+            <option value="2003" <%=concert.year === '2003' ? 'selected': '' %>>2003</option>
+            <option value="2004" <%=concert.year === '2004' ? 'selected': '' %>>2004</option>
+            <option value="2005" <%=concert.year === '2005' ? 'selected': '' %>>2005</option>
+            <option value="2006" <%=concert.year === '2006' ? 'selected': '' %>>2006</option>
+            <option value="2007" <%=concert.year === '2007' ? 'selected': '' %>>2007</option>
+            <option value="2008" <%=concert.year === '2008' ? 'selected': '' %>>2008</option>
+            <option value="2009" <%=concert.year === '2009' ? 'selected': '' %>>2009</option>
+            <option value="2010" <%=concert.year === '2010' ? 'selected': '' %>>2010</option>
+            <option value="2011" <%=concert.year === '2011' ? 'selected': '' %>>2011</option>
+            <option value="2012" <%=concert.year === '2012' ? 'selected': '' %>>2012</option>
+            <option value="2013" <%=concert.year === '2013' ? 'selected': '' %>>2013</option>
+            <option value="2014" <%=concert.year === '2014' ? 'selected': '' %>>2014</option>
+            <option value="2015" <%=concert.year === '2015' ? 'selected': '' %>>2015</option>
+            <option value="2016" <%=concert.year === '2016' ? 'selected': '' %>>2016</option>
+            <option value="2017" <%=concert.year === '2017' ? 'selected': '' %>>2017</option>
+            <option value="2018" <%=concert.year === '2018' ? 'selected': '' %>>2018</option>
+            <option value="2019" <%=concert.year === '2019' ? 'selected': '' %>>2019</option>
+            <option value="2020" <%=concert.year === '2020' ? 'selected': '' %>>2020</option>
+            <option value="2021" <%=concert.year === '2021' ? 'selected': '' %>>2021</option>
+            <option value="2022" <%=concert.year === '2022' ? 'selected': '' %>>2022</option>
+            <option value="2023" <%=concert.year === '2023' ? 'selected': '' %>>2023</option>
+
+        </select>
+      </div>
+
+      <label for="month" class="mb-2">Concert month</label>
+      
+      <label for="month" class="mb-2">Select a genre</label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="year">Genre</label>
+        </div>
+        <select name="genre" class="custom-select form-control" id="inputGroupSelect01">
+            <option value="pop" <%=concert.genre === 'pop' ? 'selected': '' %>>pop</option>
+    <option value="rock" <%=concert.genre === 'rock' ? 'selected': '' %>>rock</option>
+    <option value="metal" <%=concert.genre === 'metal' ? 'selected': '' %>>metal</option>
+    <option value="rap/hip hop" <%=concert.genre === 'rap/hip hop' ? 'selected': '' %>>rap/hip hop</option>
+    <option value="jazz" <%=concert.genre === 'jazz' ? 'selected': '' %>>jazz</option>
+    <option value="instrumental" <%=concert.genre === 'instrumental' ? 'selected': '' %>>instrumental</option>
+    <option value="classical" <%=concert.genre === 'classical' ? 'selected': '' %>>classical</option>
+    <option value="funk" <%=concert.genre === 'funk' ? 'selected': '' %>>funk</option>
+    <option value="rnb" <%=concert.genre === 'rnb' ? 'selected': '' %>>rnb</option>
+    <option value="blues" <%=concert.genre === 'blues' ? 'selected': '' %>>blues</option>
+    <option value="country" <%=concert.genre === 'country' ? 'selected': '' %>>country</option>
+    <option value="acoustic" <%=concert.genre === 'acoustic' ? 'selected': '' %>>acoustic</option>
+    <option value="swing" <%=concert.genre === 'swing' ? 'selected': '' %>>swing</option>
+    <option value="synthwave" <%=concert.genre === 'synthwave' ? 'selected': '' %>>synthwave</option>
+        </select>
+      </div>
+
+      <label for="visibility" class="mb-2 mt-3">visibility</label>
+      <select name="visibility" id="visibility">
+          <option value="public">public (can be seen and purchased by anyone)</option>
+          <option value="private">private (only you can see it and no one can buy it)</option>
+      </select>
+
+      <div class="input-container mt-1 mb-3">
+        <label for="img" class="form-label">thumbnail</label>
+        <input type="file" name="img" onchange="validateUpload()" class="form-control img-input"  id="img-input"/>
+         <div class="invalid-feedback mb-3">in the field we had a code of honour, 
+            to fill in this field</div>
+    </div>
+
+    <p id="valid"></p>
+    
+    <p id="invalid"></p>
+
+
+  <div class="col-auto">
+    <label class="sr-only" for="inlineFormInputGroup">Price</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">£</div>
+      </div>
+      <input type="number" name="price" value="15" class="form-control" id="inlineFormInputGroup" placeholder="Price">
+    </div>
+  </div>
+
+<p class="invalidPrice"></p>
+
+<div class="form-row text-center">
+    <div class="col-12">
+        <button type="submit" id="submit" class="mt-3 rounded mb-0">Submit</button>
+    </div>
+ </div>
+</div>
+</form>
+
+<a href="/posts/<%= concert._id%>">
+<p class="rounded mt-3 text-center">Go Back</p>
+</a>
+
+</div>
+</div>
+<div class="mt-auto">
+<%- include('partials/footer')%>   
+</div> 
+</body>
+
+
+<script src="/public/js/validation.js"></script>
+<style>
+    a{
+    color: #3c3d3c;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #3c3d3c;
+ text-decoration: underline #1ca78b 0.3vh;
+}
+
+footer.a{
+    color: blue;
+}
+
+</style>
+</html>

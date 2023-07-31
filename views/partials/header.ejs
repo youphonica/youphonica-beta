@@ -1,0 +1,206 @@
+<% if (!activeUser) {%>
+  <div class="header-si header-bg">
+
+
+    <a href="/posts">
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="300px" height="150px" viewBox="0 0 2000 2000">
+          <defs>
+            <style>
+              .cls-1 {
+                font-size: 300px;
+                fill: #1ca78a;
+                font-family: Bahnschrift;
+              }
+        
+              .cls-2 {
+                fill: #fe0000;
+              }
+            </style>
+          </defs>
+          <text id="youphonica_" data-name="youphonica  " class="cls-1" x="389.806" y="778.145">youphonica  </text>
+          <circle class="cls-2" cx="1563.685" cy="579.687" r="27.125"/>
+        </svg>
+          
+        </a>
+
+
+
+
+
+
+        <div class="search-container">
+            <form action="/posts?`${search-bar.value}`genre=all" class="search-form">
+                <div class="input-group">
+                    <button class="search search-icon-btn" type="submit" id="button-addon1"><span class="material-symbols-outlined search-icon">
+                        search
+                        </span></button>
+                    <input type="text" class="form-control search-bar" placeholder="search" name="search" aria-describedby="button-addon1">
+                    
+                    
+                    <div class="sign-in-phone">
+                    <a href="/account/sign-in" class="sign-in">
+                      <p>sign in</p>
+                       
+                     </a>
+                    </div>
+
+
+                  </div>
+            </div>
+        </form>
+    
+
+
+
+    <div class="right-cont">
+
+
+    <div class="icon-container-nav nav-text account-icon sign-in" id="nav-a">
+      <a href="/account/sign-in" class="sign-in">
+       <p>sign in</p>
+        <span class="nav-icon material-symbols-outlined">
+            login
+            </span>
+      </a>
+  </div>        
+  </div>
+  </div>
+  <p style="color: #fe0000; font-weight: 600; background-color:#3c3c3c; border: 5px solid #1ca78a;" class="text-center">Youphonica beta test</p>
+  </div>
+<% } else {%>
+
+  <div class="header-si header-bg">
+
+
+    <a href="/posts">
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="300px" height="150px" viewBox="0 0 2000 2000">
+        <defs>
+          <style>
+            .cls-1 {
+              font-size: 300px;
+              fill: #1ca78a;
+              font-family: Bahnschrift;
+            }
+      
+            .cls-2 {
+              fill: #fe0000;
+            }
+          </style>
+        </defs>
+        <text id="youphonica_" data-name="youphonica  " class="cls-1" x="389.806" y="778.145">youphonica  </text>
+        <circle class="cls-2" cx="1563.685" cy="579.687" r="27.125"/>
+      </svg>
+        
+      </a>
+
+
+
+
+
+
+        <div class="search-container signed-in-container">
+            <form action="/posts?`${search-bar.value}`genre=all" class="search-form signed-in-form">
+                <div class="input-group">
+                    <button class="search" type="submit" id="button-addon1"><span class="material-symbols-outlined">
+                        search
+                        </span></button>
+                    <input type="text" class="form-control search-bar" placeholder="search" name="search" aria-describedby="button-addon1">
+                  </div>
+
+
+                  <span aria-controls="dropdown-1" class="nav-icon material-symbols-outlined account-icon-phone" onclick="toggledropdown()">
+                    account_circle
+                    </span>
+
+
+
+                    
+            </div>
+        </form>
+    
+
+
+
+
+    <div class="right-cont">
+
+
+    <div class="icon-container-nav nav-text account-icon" id="nav-a">
+        <span aria-controls="dropdown-1" class="nav-icon material-symbols-outlined">
+            account_circle
+            </span>
+          <br>
+        account
+
+            <div class="notis">
+            <a href="/account/notifications">
+            <span class="nav-icon material-symbols-outlined notify-bell">
+              notifications
+              </span>
+            </a>
+            <% if(notis === 0){ %>
+            <% }else{ %>
+            <p class="notis-num"><%= notis %></p>
+            <% } %>
+        </div>
+    </div>        
+  </div>
+  </div>
+    
+    <div aria-expanded="false" class="dropdown-1 hide">
+          <ul>
+            <li>
+              <a href="/account/my-accounts">
+              my artists <span class="nav-icon material-symbols-outlined icons">
+                groups
+                </span>
+              </a>
+            </li>
+    
+            <li><a href="/artists/apply-for-artist-account">
+              apply for artist account <span class="nav-icon material-symbols-outlined icons">
+                music_note
+                </span>
+            </a></li>
+            <li><a href="/account/upgrade-account">subscriptions 
+              <span class="nav-icon material-symbols-outlined icons">
+                paid
+                </span>
+            </a></li>
+    
+            <li><a href="/account/purchases">purchases 
+              <span class="nav-icon material-symbols-outlined icons">
+                shopping_cart
+                </span>
+            </a></li>
+
+
+
+            <li class="phone-notis"><a href="/account/notifications"> 
+              <% if(notis === 0){ %>
+                notifications
+                <% }else{ %>
+                 <p class="phone-notis-text">notifications <span class="notis-num-phone"><%= notis %></span> </p>
+                <% } %> 
+            </a></li>
+
+    
+          
+            <li><a href="/account/account-settings">settings 
+              <span class="nav-icon material-symbols-outlined icons">
+                settings
+                </span>
+            </a></li>
+            <li><a href="/account/sign-out">sign out 
+              <span class="nav-icon material-symbols-outlined icons">
+                logout
+                </span>
+            </a></li>
+          </ul>
+        </div>
+  </div>
+
+  
+  <p style="color: #fe0000; font-weight: 600; background-color:#3c3c3c; border: 5px solid #1ca78a;" class="text-center">Youphonica beta test</p>
+<% } %> 
+

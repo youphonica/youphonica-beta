@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/test2.css">
+    <script src="https://kit.fontawesome.com/1364972581.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Youphonica</title>
+    <link rel="icon" type="image/png"  href="\media\32 x 32 icon.png">
+</head>
+<body>
+    <%- include('partials/header')%>
+
+    <div id="container-new" class="col-10 offset-1">
+
+ 
+   <h2 class="text-center main-desc mt-0 mb-5">Watch concerts, listen to live events and find new artists from all around the world. Youphonica aims to offer convinience to both artists and their fans.</h2>
+          <div class="buttons">
+        <a href="/account/create-account">
+          <button class="rounded mt-0 mb-2 offset-4">Create Account</button>
+        </a>
+
+        <a href="/account/sign-in">
+          <button class="rounded mt-0 mb-2 offset-4">Sign in</button>
+        </a>
+
+        <a href="/posts">
+          <button class="rounded mt-0 mb-2 offset-4">Homepage</button>
+        </a>
+
+        <a href="/artists">
+          <button class="rounded mt-0 mb-2 offset-4">Explore All Of The Artists On Youphonica</button>
+        </a> 
+        </div>
+
+<h2 class="text-center mt-5" id="target"></h2>
+
+         <script>
+             const targetH2 = document.getElementById('target')
+
+             const date = new Date()
+
+             const dts = date.toDateString()
+
+             const time = date.toLocaleTimeString()
+
+             targetH2.innerText = dts
+         </script>
+    
+    </div>
+    <div class="mt-auto">
+        <%- include('partials/footer')%>   
+    </div>
+ 
+    
+  <style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3c3d3c;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.3s linear;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+:root{
+    --clr-text: #1ca78b;
+    --clr-textitems: #3c3d3c;
+    --clr-navbar: #1ca78b;
+    --clr-background: #e8e8e8; 
+    --clr-items: #c0c7cc;
+    --clr-textgrey: #3c3d3c;
+}
+
+.dark-mode{
+    --clr-text: #1ca78b;
+    --clr-background: #5c5e5c; 
+    --clr-items: #3c3d3c;
+    --clr-textgrey: #3c3d3c;
+    --clr-textitems: #1ca78b;
+}
+
+#container-new{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5vh;
+}
+
+div.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2%;
+}
+
+
+
+h2{
+    color: #1ca78b;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+h2.main-desc{
+    font-size: x-large;
+}
+
+
+.hide{
+    display: none;
+}
+
+
+
+button{
+    margin-top: 5%;
+    width: 25vw;
+    background-color: #1ca78b;
+    border: solid 3px #3c3d3c;
+}
+
+
+button:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+    color: #1ca78b;
+    text-decoration: none;
+    background-color: #3c3d3c;
+    height: auto;
+    width: 100vw;
+    margin-top: auto;
+}
+
+  </style>
+</html>

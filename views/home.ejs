@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="\js\searchbar.js" defer></script>
+    <script src="\js\clr-switch.js" defer></script> 
+    <script src="\js\dropdown.js" defer></script>
+    <title>Youphonic</title>
+    <link rel="icon" type="image/png"  href="\media\32 x 32 icon.png">
+</head>
+<body>
+  
+  <%- include('partials/header')%>   
+    
+
+
+
+<% if(ad && ad.length) { %> 
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-3 mt-3" 
+    id="pdAlert" role="alert">
+        <h3 class="text-center">
+            <%= ad %> 
+        </h3>
+        <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+      </div>
+    <%  } %>
+
+    <% if(ac && ac.length) { %> 
+        <div class="alert alert-success alert-dismissible fade show col-6 offset-3 mt-3" 
+        id="pdAlert" role="alert">
+            <h3 class="text-center">
+                <%= ac %> 
+            </h3>
+            <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+          </div>
+        <%  } %>
+
+    <% if(pd && pd.length) { %> 
+        <div class="alert alert-success alert-dismissible fade show col-6 offset-3 mt-3" 
+        id="pdAlert" role="alert">
+            <h3 class="text-center">
+                <%= pd %> 
+            </h3>
+            <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+          </div>
+        <%  } %>
+
+        <% if(ls && ls.length) { %> 
+            <div class="alert alert-success alert-dismissible fade show col-6 offset-3 mt-3" 
+            id="pdAlert" role="alert">
+                <h3 class="text-center">
+                    <%= ls %> 
+                </h3>
+                <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+              </div>
+            <%  } %>
+
+
+        <% if(pnf && pnf.length) { %> 
+            <div class="alert alert-danger alert-dismissible fade show col-6 offset-3 mt-3" 
+            id="pdAlert" role="alert">
+                <h3 class="text-center">
+                    <%= pnf %> 
+                </h3>
+                <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+              </div>
+            <%  } %>
+
+            
+        <% if(postFail && postFail.length) { %> 
+            <div class="alert alert-danger alert-dismissible fade show col-6 offset-3 mt-3" 
+            id="pdAlert" role="alert">
+                <h3 class="text-center">
+                    <%= postFail %> 
+                </h3>
+                <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+              </div>
+            <%  } %>
+
+            <% if(paynf && paynf.length) { %> 
+                <div class="alert alert-danger alert-dismissible fade show col-6 offset-3 mt-3" 
+                id="pdAlert" role="alert">
+                    <h3 class="text-center">
+                        <%= paynf %> 
+                    </h3>
+                    <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+                  </div>
+                <%  } %>
+
+                
+            <% if(asi && asi.length) { %> 
+                <div class="alert alert-danger alert-dismissible fade show col-6 offset-3 mt-3" 
+                id="pdAlert" role="alert">
+                    <h3 class="text-center">
+                        <%= asi %> 
+                    </h3>
+                    <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+                  </div>
+                <%  } %>
+
+
+
+                <% if(aalr && aalr.length) { %> 
+                  <div class="alert alert-danger alert-dismissible fade show col-6 offset-3 mt-3" 
+                  id="pdAlert" role="alert">
+                      <h3 class="text-center">
+                          <%= aalr %> 
+                      </h3>
+                      <a href="process.env.DOMAIN/about#number-of-accounts"><p class="text-center more-link">click here to find out more:</p></a>
+                      <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+                    </div>
+                  <%  } %>
+
+                <% if(slo && slo.length) { %> 
+                    <div class="alert alert-success alert-dismissible fade show col-6 offset-3 mt-3" 
+                    id="pdAlert" role="alert">
+                        <h3 class="text-center">
+                            <%= slo %> 
+                        </h3>
+                        <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+                      </div>
+                      <%  } %>
+
+                      <% if(na && na.length) { %> 
+                        <div class="alert alert-danger alert-dismissible fade show col-6 offset-3 mt-3" 
+                        id="pdAlert" role="alert">
+                            <h3 class="text-center">
+                                <%= na %> 
+                            </h3>
+                            <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+                          </div>
+                    <%  } %>
+
+                    <% if(anf && anf.length) { %> 
+                        <div class="alert alert-danger alert-dismissible fade show col-6 offset-3 mt-3" 
+                        id="pdAlert" role="alert">
+                            <h3 class="text-center">
+                                <%= anf %> 
+                            </h3>
+                            <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+                          </div>
+                    <%  } %>
+
+                    <% if(ntdaa && ntdaa.length) { %> 
+                        <div class="alert alert-danger alert-dismissible fade show col-6 offset-3 mt-3" 
+                        id="pdAlert" role="alert">
+                            <h3 class="text-center">
+                                <%= ntdaa %> 
+                            </h3>
+                            <p id="dismiss-pd" class="text-center dismiss">dismiss</p>
+                          </div>
+                    <%  } %>
+
+
+
+<div id="container-new" class="mt-5">
+
+
+
+
+
+
+
+
+
+<div class="options" style="text-align: center; margin-top: -1%;">
+    <a href="/posts/under-5"><button class="option round features">£5 or lower</button></a>
+    <a href="/posts/under-10"><button class="option round features">£10 or lower</button></a>
+    <a href="/posts/under-15"><button class="option round features">£15 or lower</button></a>
+    <a href="/artists"><button class="option round features">all artists</button></a>
+    <a href="/artists"><button class="option round features">following</button></a>
+
+    <a href="/artists"><button class="option options-genre round features">rock</button></a>
+    <a href="/artists"><button class="option options-genre round features">metal</button></a>
+    <a href="/artists"><button class="option options-genre round features">pop</button></a>
+    <a href="/artists"><button class="option options-genre round features">synthwave</button></a>
+    <a href="/artists"><button class="option options-genre round features">country</button></a>
+    <a href="/artists"><button class="option options-genre round features">rap</button></a>
+    <a href="/artists"><button class="option options-genre round features">indie</button></a>
+    <a href="/artists"><button class="option options-genre round features">70s</button></a>
+    <a href="/artists"><button class="option options-genre round features">80s</button></a>
+    <a href="/artists"><button class="option options-genre round features">90s</button></a>
+    <a href="/artists"><button class="option options-genre round features">2000s</button></a>
+</div> 
+
+    <div id="container-new" class="col-6 mt-3 offset-3">
+
+<% if(priceRange == 'all'){ %> 
+<h2 class="text-center mt-3">
+    <div class="line-before"></div>
+    concerts 
+    <div class="line-after"></div>
+  </h2>
+<% }if(priceRange == 0){ %> 
+<h2 class="text-center mt-3">
+  <div class="line-before"></div>
+  £5 or lower
+  <div class="line-after"></div>
+</h2>
+<% }if(priceRange == 10){ %> 
+<h2 class="text-center mt-3">
+  <div class="line-before"></div>
+  £10 or lower
+  <div class="line-after"></div>
+</h2>
+<% }if(priceRange == 15){ %> 
+<h2 class="text-center mt-3">
+  <div class="line-before"></div>
+  £15 or lower
+  <div class="line-after"></div>
+</h2>
+<% } %> 
+</div>
+
+
+<div id="container-new" class="col-10 offset-1">
+
+
+
+<%for (let Concert of Concerts) {%> 
+<!-- handle no results -->
+
+
+    <% if(Concert.visibility === 'public'){ %>
+
+        
+            <div class="content">
+            <div class="row mb-3">
+                <div class="col-md-4 img-container">
+                    <a href="posts/<%= Concert.id  %>">
+                    <!-- <img class="img-fluid thumb p-2" alt="" src="<%= Concert.img  %>"> -->
+
+                    <img class="img-fluid thumb p-2" alt="" src="\media\pixel dreams logo 4.png">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+
+                        <a href="posts/<%= Concert.id  %>">
+                        <h3 class="card-title">
+                            <%= Concert.title  %>
+                        </h3>
+                          </a>
+                     
+                        <a href="/artists/<%= Concert.artId  %>">
+                        <p class="card-text info">by: <%= Concert.artist.artName  %></p>
+                        </a>
+            
+                        <p class="card-text mt-2 info">Concert year: <%= Concert.year  %> |
+                        Concert genre: <%= Concert.genre  %>
+                        </p>
+
+                        <div class="post-info-bottom-row">
+                
+                          <p class="price-text">£<%= Concert.price %> </p>
+                     
+
+                         
+                        <p class="info type">
+                            <%= Concert.type %> 
+                        </p>
+                        
+
+                          </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <% } else{ %> 
+<% }%>   
+<% }%>   
+
+
+
+
+  <% if(cookies == null || undefined) {%> 
+    <div class="cookie-pop-up">
+      
+     <p>Youphonica uses cookies to make certain aspcets of the site work. <a href="">learn more</a></p> 
+        <br>
+        <div class="cookie-buttons">
+          <form action="/cookies-refuse" method="post">
+        <button type="submit" class="cookie-btn reject">reject non-essential
+        </button>
+      </form>
+  
+      <form action="/cookies-accept" method="post">
+      <button type="submit" class="cookie-btn accept">accept all</button>
+    </form>
+      </div>
+  </div>
+<% }else{ %>
+  <% } %> 
+    </div>
+
+<div class="mt-auto">
+<%- include('partials/footer')%>   
+
+
+</div> 
+</body>
+<script src="/public/js/hide-flash.js"></script>
+
+<script>
+const alert = document.getElementById('pdAlert');
+const dismiss = document.getElementById('dismiss-pd');
+dismiss.onclick = function () {
+  if (alert.style.display !== "none") {
+    alert.style.display = "none";
+  } else {
+    alert.style.display = "block";
+  }
+};
+
+</script>
+
+<style>
+    a{
+    color: #3c3d3c;
+    text-decoration: none;
+}
+
+
+
+footer.a{
+    color: blue;
+}
+
+
+
+</style>
+</html>
