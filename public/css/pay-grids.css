@@ -1,0 +1,33 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 30vw 30vw;
+    grid-gap: 5vw;
+    margin-top: 10%;
+    align-items: center;
+}
+
+.grid-1{
+    border-right: 2px solid #1ca78b;
+}
+
+.thumb{
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 30vw;
+    max-width: 20vw;
+    max-height: 30vh;
+    border: 3px solid #1ca78b;
+}
+
+
+.info{
+    font-weight: bold;
+}
+
+p.type{
+    width: min-content;
+    border: 2px 2px 2px 2px #3c3d3c;
+    border-radius: 10%;
+    padding: 1vh;
+    background-color: #0aa183;
+}

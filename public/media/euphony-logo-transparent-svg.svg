@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1300" viewBox="0 0 800 800">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 300px;
+        fill: #1ca78a;
+        font-family: Bahnschrift;
+      }
+
+      .cls-2 {
+        fill: #fe0000;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <text id="euph_" data-name="euph  " class="cls-1" x="456.806" y="729.144">euph  </text>
+  <text id="ny" class="cls-1" x="1265" y="728">ny</text>
+  <path id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-2" d="M1194.56,576.441c39.45,0.46,71,35.019,70.47,77.189s-32.94,75.984-72.38,75.524-71-35.019-70.47-77.189S1155.12,575.981,1194.56,576.441Z"/>
+</svg>

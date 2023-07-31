@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1300" viewBox="0 0 2000 1300">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 300px;
+        fill: #1ca78a;
+        font-family: Bahnschrift;
+      }
+
+      .cls-2 {
+        fill: #fe0000;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <text id="mel_" data-name="mel  " class="cls-1" x="598.806" y="731.145">mel  </text>
+  <text id="dy" class="cls-1" x="1265" y="728">dy</text>
+  <path id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-2" d="M1194.56,576.441c39.45,0.46,71,35.019,70.47,77.189s-32.94,75.984-72.38,75.524-71-35.019-70.47-77.189S1155.12,575.981,1194.56,576.441Z"/>
+</svg>

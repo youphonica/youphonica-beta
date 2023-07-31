@@ -1,0 +1,358 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.3s linear;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+:root{
+    --clr-text: #1ca78b;
+    --clr-textitems: #3c3d3c;
+    --clr-navbar: #1ca78b;
+    --clr-background: #e8e8e8; 
+    --clr-items: #c0c7cc;
+    --clr-textgrey: #3c3d3c;
+}
+
+.dark-mode{
+    --clr-text: #1ca78b;
+    --clr-background: #5c5e5c; 
+    --clr-items: #3c3d3c;
+    --clr-textgrey: #3c3d3c;
+    --clr-textitems: #1ca78b;
+}
+
+#container-new{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5vh;
+}
+
+h2{
+    color: #3c3d3c;
+    text-decoration: underline #1ca78b;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*nav bar stuff */
+
+
+
+.header{
+    display: flex;
+    justify-content: left;
+    margin-right: 83%;
+    margin-left: 0%;
+    padding: 0;
+    transition: 0s linear;
+}
+
+
+
+nav{
+    width: 90vw;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: right;
+    margin: 0;
+    padding: 0;
+    background-color: #3c3d3c;
+    text-decoration: none;
+}
+
+#nav-a{
+    padding: 0;
+    color: #1ca78b;
+    text-decoration: none;
+}
+
+.icon-container-nav{
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    margin-right: 5%;
+    padding-right: 0%;
+    margin-top: 1%;
+}
+
+.sign-in, .sign-in a{
+    color: #1ca78b;
+    text-decoration: none;
+}
+
+.sign-in:hover{
+    color: #1ca78b;
+    text-decoration: underline 2px #1ca78b;
+}
+
+.dropdown-1{
+    position: absolute;
+    justify-content: end;
+    margin-right: 0;
+    margin-left: 80vw;
+    padding: 1%;
+    background-color: #3c3d3c;
+    color: #1ca78b;
+    list-style: none;
+}
+
+
+
+ul{
+    list-style:none;
+    text-align: right;
+    padding-right: 12%;
+}
+
+li{
+    margin-bottom: 2%;
+}
+
+li a{
+  color: #1ca78b;  
+  padding: 2%;
+  text-decoration: none;
+  list-style: none;
+}
+
+li a:hover{
+    color: #1ca78b;  
+    text-decoration: underline 2px #1ca78b;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.label{
+ font-weight: 600;
+}
+
+.select-country{
+  margin-top: 1%;
+}
+
+
+
+
+
+button{
+    width: 10em;
+    background-color: #1ca78b;
+    border: solid 3px #1ca78b;
+    border-radius: 27px !important;
+    /* box-shadow: 2px 3px 3px 1px #3c3d3c; */
+    margin-top: 0%;
+}
+
+
+.delete-btn{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: 2px solid #f2182a;
+}
+
+
+
+button:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    background-color: #fff;
+    border-width: 1px;
+    color: #1ca78b;
+}
+
+.delete-btn:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    background-color: #f2182a;
+    border: solid 2px #3c3d3c;
+    color: #3c3d3c;
+}
+
+
+.buy{
+    background-color: #f2182a;
+}
+
+span.dollar{
+    background-color: #1ca78b;
+}
+
+
+
+
+
+span{
+    height: 4vh;
+}
+
+select{
+    height: 5vh;
+}
+
+.option{
+    margin-left: 1vw;
+}
+
+
+
+a{
+    color: #3c3d3c;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+footer{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+    color: #1ca78b;
+    text-decoration: none;
+    background-color: #3c3d3c;
+    width: 99vw;
+    padding: 0;
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* phones */
+
+@media only screen and (max-width: 600px){
+  button.submit{
+  margin-left: 20%;
+  min-width: fit-content;
+}
+
+.delete-btn{
+  margin-left: 20%;
+  min-width: fit-content;
+}
+
+.label{
+  margin-left: 22%;
+}
+
+.select-country{
+  margin-left: -8%;
+  margin-top: 1%;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tablets */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* laptops */
+
+@media only screen and (min-width: 1200px){
+    .options{
+        margin-top: 0%;
+    }
+    }

@@ -1,0 +1,26 @@
+.glow{
+    color: gold;
+    transition: 0.4s ease-in-out;
+}
+
+textarea{
+    width: 40vw;
+    height: 20vh;
+}
+
+textarea.invalid{
+    background-color: #d9534f;
+}
+
+textarea.valid{
+    background-color: #5cb85c;
+}
+
+.warning{
+    color: #d9534f;
+
+}
+
+
+
+

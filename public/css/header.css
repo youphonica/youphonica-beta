@@ -1,0 +1,93 @@
+/*nav bar stuff */
+.header{
+    display: flex;
+    justify-content: left;
+    margin-right: 37vw;
+    margin-left: 0%;
+    padding: 0;
+    transition: 0s linear;
+}
+
+
+
+nav{
+    width: 90vw;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: right;
+    margin: 0;
+    padding: 0;
+    background-color: #3c3d3c;
+    text-decoration: none;
+}
+
+#nav-a{
+    padding: 0;
+    color: #1ca78b;
+    text-decoration: none;
+}
+
+.icon-container-nav{
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    margin-right: 5%;
+    padding-right: 0%;
+    margin-top: 1%;
+}
+
+.sign-in, .sign-in a{
+    color: #1ca78b;
+    text-decoration: none;
+}
+
+.sign-in:hover{
+    color: #1ca78b;
+    text-decoration: underline 3px #1ca78b;
+}
+
+.dropdown-1{
+    position: absolute;
+    justify-content: end;
+    margin-right: 0;
+    margin-left: 80vw;
+    padding: 1%;
+    background-color: #3c3d3c;
+    color: #1ca78b;
+    list-style: none;
+}
+
+
+
+ul{
+    list-style:none;
+    text-align: right;
+    padding-right: 12%;
+}
+
+li{
+    margin-bottom: 2%;
+}
+
+li a{
+  color: #1ca78b;  
+  padding: 2%;
+  text-decoration: none;
+  list-style: none;
+}
+
+li a:hover{
+    color: #1ca78b;  
+    text-decoration: underline 2px #1ca78b;
+  }
+
+
+
+
+
+
+
+
+

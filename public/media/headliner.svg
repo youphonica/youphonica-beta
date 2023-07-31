@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1300" viewBox="0 0 2000 1300">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 300px;
+        fill: #1ca78a;
+        font-family: Bahnschrift;
+      }
+
+      .cls-2 {
+        fill: #fe0000;
+      }
+    </style>
+  </defs>
+  <text id="headliner" class="cls-1" x="356" y="833">headliner</text>
+  <circle class="cls-2" cx="1133.685" cy="638.687" r="27.125"/>
+</svg>
